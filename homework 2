@@ -1,0 +1,57 @@
+#homework 2
+
+#ex1
+a = input("Is it raining outside? ")
+a = a.lower()
+if a=="yes":
+    b = input("Is it windy outside? ")
+    b = b.lower()
+    if b == "yes":
+        print("It is too windy for an umbrella")
+    else:
+        print("Take an umbrella")
+else:
+    print("Enjoy your day")
+
+#ex2
+s1 = input("What is your name? ").title()
+s2 = input("What is your surname? ").title()
+print (f"{s1} {s2}")
+
+#ex3
+s = input("Введите первую строчку вашего любимого стихотворения: ")
+print(f"Длина введенной Вами строки: {len(s)}")
+n = int(input("Введите начальное значение: "))
+k = int(input("Введите конечное значение: "))
+print(s[n:k])
+
+#ex4
+name = input("What is your name? ")
+if len(name)<5:
+    surname = input("What is your surname? ")
+    s = name + surname
+    print(s.upper())
+else:
+    print(name.lower())
+    
+#ex5
+import math
+digit = int(input("Введите число, большее 500: "))
+print(round(math.sqrt(digit), 2))
+
+#ex6
+import math
+a = int(input("Выберите фигуру: круг - 1, треугольник - 2, прямоугольник -3: "))
+if a==1:
+    r = int(input("Введите радиус: "))
+    s = print(f"Площадь: {math.pi*r**2}")
+elif a==2:
+    b = int(input("Введите первую сторону: "))
+    c = int(input("Введите вторую сторону: "))
+    d = int(input("Введите третью сторону: "))
+    p = (b + c + d) / 2
+    s = print(f"Площадь: {math.sqrt(p*(p-b)*(p-c)*(p-d))}")
+else:
+    e = int(input("Введите первую сторону: "))
+    f = int(input("Введите вторую сторону: "))
+    s = print(f"Площадь: {e*f}")
