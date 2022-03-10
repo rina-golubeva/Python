@@ -82,3 +82,38 @@ for stud in marks:
         if item >= oz:
             count+=1
 print(count)
+
+
+#ex 5
+queries = [
+    'смотреть сериалы онлайн',
+    'новости спорта',
+    'афиша кино',
+    'курс доллара',
+    'сериалы этим летом',
+    'курс по питону',
+    'сериалы про спорт',
+]
+
+count2 = 0
+count3 = 0
+words = [len(sentence.split()) for sentence in queries]
+
+for word in sorted(set(words)):
+    print(f"Поисковых запросов, содержащих {word} слов(а): {words.count(word)/len(queries):.2%}")
+
+
+    
+#ex 6
+results = {
+    'vk': {'revenue': 103, 'cost': 98},
+    'yandex': {'revenue': 179, 'cost': 153},
+    'facebook': {'revenue': 103, 'cost': 110},
+    'adwords': {'revenue': 35, 'cost': 34},
+    'twitter': {'revenue': 11, 'cost': 24},
+}
+ROI = 0
+for comp in results:
+    ROI = round((results[comp]['revenue']/results[comp]['cost']-1)*100, 2)
+    results[comp].update({'ROI': ROI})
+    print(comp, results[comp])
